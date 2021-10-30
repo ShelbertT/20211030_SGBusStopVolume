@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Passenger Volume by Daytime</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- All database needed-->
+    <script src="./python/database/js_data/static/human_volume_holiday_coords.js"></script>
+    <script src="./python/database/js_data/static/human_volume_weekday_coords.js"></script>
+    <!-- Calcite Design System: https://developers.arcgis.com/calcite-design-system/ -->
+    <script type="module" src="https://js.arcgis.com/calcite-components/1.0.0-beta.63/calcite.esm.js"></script>
+    <script nomodule="" src="https://js.arcgis.com/calcite-components/1.0.0-beta.63/calcite.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://js.arcgis.com/calcite-components/1.0.0-beta.65/calcite.css"/>
+    <!-- Local script -->
+    <script src="./humanvolume_holiday/js/colorramp.js"></script>
+    <script src="./humanvolume_holiday/js/index.js"></script>
+    <script src="./humanvolume_holiday/js/mapstyle.js"></script>
+    <link rel="stylesheet" type="text/css" href="./humanvolume_holiday/css/style.css" />
+</head>
+<body>
+  <div id="headbar">
+
+    <button href="javascript:;" id = "delete" onclick="deleteHeatmap()">CLEAR</button>
+
+    <calcite-dropdown id="dropdown" type="hover">
+        <calcite-button slot="dropdown-trigger">WEEKDAY</calcite-button>
+        <calcite-dropdown-group selection-mode="single" group-title="Passenger Volume" >
+          <calcite-dropdown-item id="0">00:00</calcite-dropdown-item>
+          <calcite-dropdown-item id="1">01:00</calcite-dropdown-item>
+          <calcite-dropdown-item id="2">02:00</calcite-dropdown-item>
+          <calcite-dropdown-item id="3">03:00</calcite-dropdown-item>
+          <calcite-dropdown-item id="4">04:00</calcite-dropdown-item>
+          <calcite-dropdown-item id="5">05:00</calcite-dropdown-item>
+          <calcite-dropdown-item id="6">06:00</calcite-dropdown-item>
+          <calcite-dropdown-item id="7">07:00</calcite-dropdown-item>
+          <calcite-dropdown-item id="8">08:00</calcite-dropdown-item>
+          <calcite-dropdown-item id="9">09:00</calcite-dropdown-item>
+          <calcite-dropdown-item id="10">10:00</calcite-dropdown-item>
+          <calcite-dropdown-item id="11">11:00</calcite-dropdown-item>
+          <calcite-dropdown-item id="12">12:00</calcite-dropdown-item>
+          <calcite-dropdown-item id="13">13:00</calcite-dropdown-item>
+          <calcite-dropdown-item id="14">14:00</calcite-dropdown-item>
+          <calcite-dropdown-item id="15">15:00</calcite-dropdown-item>
+          <calcite-dropdown-item id="16">16:00</calcite-dropdown-item>
+          <calcite-dropdown-item id="17">17:00</calcite-dropdown-item>
+          <calcite-dropdown-item id="18">18:00</calcite-dropdown-item>
+          <calcite-dropdown-item id="19">19:00</calcite-dropdown-item>
+          <calcite-dropdown-item id="20">20:00</calcite-dropdown-item>
+          <calcite-dropdown-item id="21">21:00</calcite-dropdown-item>
+          <calcite-dropdown-item id="22">22:00</calcite-dropdown-item>
+          <calcite-dropdown-item id="23">23:00</calcite-dropdown-item>
+      </calcite-dropdown-group>
+    </calcite-dropdown>
+
+    <a href="Human_Volume_Weekday.html">
+      <button id = "switch">SWITCH</button>
+    </a>
+
+  </div>
+  <div id="map"></div>
+  <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAUBrZ-IbaZJB6jJe2Z56gNVeqmsWNz6c&callback=initMap&libraries=visualization&v=weekly" async></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <html>
+  <head>
+    <title>Earthquake Markers</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="./anqing.js"></script>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <div id = "upbox">
+      this is a test
+    </div>
+    <div id = "leftbox">
+      this is a test
+    </div>
+    
+    <div id="map"></div> -->
+
+<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<!-- <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAUBrZ-IbaZJB6jJe2Z56gNVeqmsWNz6c&callback=initMap&v=weekly"
+      async
+    ></script>
+  </body>
+</html> -->

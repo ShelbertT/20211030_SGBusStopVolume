@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Lookup</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- All database needed-->
+    <script src="./python/database/js_data/dynamic/stops_balance.js"></script>
+    <script src="./python/database/js_data/dynamic/stops_bus_volume.js"></script>
+    <script src="./python/database/js_data/dynamic/stops_capacity.js"></script>
+    <script src="./python/database/js_data/dynamic/stops_human_volume.js"></script>
+    <!-- Calcite Design System: https://developers.arcgis.com/calcite-design-system/ -->
+    <script type="module" src="https://js.arcgis.com/calcite-components/1.0.0-beta.63/calcite.esm.js"></script>
+    <script nomodule="" src="https://js.arcgis.com/calcite-components/1.0.0-beta.63/calcite.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://js.arcgis.com/calcite-components/1.0.0-beta.65/calcite.css"/>
+    <!-- Local script -->
+    <script src="./dynamic/js/colorramp.js"></script>
+    <script src="./dynamic/js/index.js"></script>
+    <script src="./dynamic/js/mapstyle.js"></script>
+    <link rel="stylesheet" type="text/css" href="./dynamic/css/style.css" />
+</head>
+<body>
+  <div id="headbar">
+
+    <button href="javascript:;" id = "delete" onclick="deleteHeatmap()">CLEAR</button>
+
+    <calcite-dropdown id="dropdown" type="hover">
+        <calcite-button slot="dropdown-trigger">DATA LAYER</calcite-button>
+        <calcite-dropdown-group selection-mode="single" group-title="Stop Volume - Dynamic" >
+          <calcite-dropdown-item icon-start="tour" id="Capacity">Route Volume</calcite-dropdown-item>
+          <calcite-dropdown-item icon-start="car" id="BusVolume">Vehicle Volume</calcite-dropdown-item>
+          <calcite-dropdown-item icon-start="person" id="HumanVolume">Passenger Volume</calcite-dropdown-item>
+          <calcite-dropdown-item icon-start="timer" id="Balance">Stop Pressure</calcite-dropdown-item>
+      </calcite-dropdown-group>
+    </calcite-dropdown>
+
+    <button id = "update" onclick="update_data()">UPDATE</button>
+
+  </div>
+  <div id="map"></div>
+  <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAUBrZ-IbaZJB6jJe2Z56gNVeqmsWNz6c&callback=initMap&libraries=visualization&v=weekly" async></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <html>
+  <head>
+    <title>Earthquake Markers</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="./anqing.js"></script>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <div id = "upbox">
+      this is a test
+    </div>
+    <div id = "leftbox">
+      this is a test
+    </div>
+    
+    <div id="map"></div> -->
+
+<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<!-- <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAUBrZ-IbaZJB6jJe2Z56gNVeqmsWNz6c&callback=initMap&v=weekly"
+      async
+    ></script>
+  </body>
+</html> -->

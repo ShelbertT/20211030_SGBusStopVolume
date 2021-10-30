@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Overall Assessment</title>
+    <!-- Local Scripts -->
+    <link rel="stylesheet" type="text/css" href="./EsriFramework_OverallAssessment/css/style.css" />
+    <!-- ArcGIS JS API -->
+    <link rel="stylesheet" href="https://js.arcgis.com/4.21/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.21/"></script>
+    <!-- Calcite Design System: https://developers.arcgis.com/calcite-design-system/ -->
+    <script type="module" src="https://js.arcgis.com/calcite-components/1.0.0-beta.63/calcite.esm.js"></script>
+    <script nomodule="" src="https://js.arcgis.com/calcite-components/1.0.0-beta.63/calcite.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://js.arcgis.com/calcite-components/1.0.0-beta.65/calcite.css"/>
+    <!-- dark style -->
+    <link rel="stylesheet" href="https://js.arcgis.com/4.21/esri/themes/dark/main.css"/>
+    <script src="https://js.arcgis.com/4.21/"></script>
+</head>
+<body>
+    <div id="headbar">
+        <button href="javascript:;" id = "delete" onclick="deletemap()">CLEAR</button>
+
+        <calcite-dropdown id="dropdown" type="hover">
+            <calcite-button slot="dropdown-trigger">Data Display</calcite-button>
+            <calcite-dropdown-group group-title="Bus Stop" selection-mode="multi">
+                <calcite-dropdown-item icon-start="freehand-area" id="Isochronous">Isochronous Area</calcite-dropdown-item>
+                <calcite-dropdown-item icon-start="car" id="Stop">Stop Pressure</calcite-dropdown-item>
+            </calcite-dropdown-group>
+            <calcite-dropdown-group group-title="Subzone" selection-mode="multi">
+                <calcite-dropdown-item icon-start="percent" id="Service">Service Coverage Rate</calcite-dropdown-item>
+                <calcite-dropdown-item icon-start="person" id="Vulnerable">Vulnerable Group</calcite-dropdown-item>
+            </calcite-dropdown-group>
+            <calcite-dropdown-group group-title="Suggestion" selection-mode="multi">
+                <calcite-dropdown-item icon-start="lightbulb" id="Increasing">Increasing Density Suggestion</calcite-dropdown-item>
+            </calcite-dropdown-group>
+        </calcite-dropdown>
+
+        <a href="MAINPAGE.html">
+            <button id = "mainpage">BACK</button>
+        </a>
+
+    </div>
+    <div id="viewDiv"></div>
+    <script src="./EsriFramework_OverallAssessment/js/Map.js"></script>
+    
+    <!-- <div id="panelDiv"> -->
+        
+    <!-- </div> -->
+</body>
+</html>
